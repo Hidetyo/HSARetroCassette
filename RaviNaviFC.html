@@ -1,0 +1,109 @@
+<!-- Ravi and Navi Web Emulation App -->
+<!-- (C) 2023 Hidetyo's Apps -->
+<!-- 
+License
+
+Emulator NesJs(https://github.com/angelo-wf/NesJs):
+
+Copyright (c) 2019 angelo_wf
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
+-->
+
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>ラビィとナビィ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<script>
+  window.onload = function () {
+    if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+      document.getElementById("cont").style.display = "block";
+    }
+    else {
+      // document.getElementById("cont").style.display = "none";
+    }
+  }
+</script>
+
+<body>
+  <p id="title">ラビィとナビィ</p>
+  <button id="gamestart">ゲームをはじめる / リセット</button>
+  <div class="hide">
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+    <button id="hardreset">Power cycle</button>
+    <button id="runframe">Run 1 frame</button><br>
+  </div>
+  <br>
+  <canvas id="output"></canvas>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="touchController" id="cont">
+    <div class="Dpad">
+      <button id="UButton" class="controller">↑</button>
+      <br>
+      <button id="LButton" class="controller">←</button>
+      <button id="RButton" class="controller">→</button>
+      <br>
+      <button id="DButton" class="controller">↓</button>
+    </div>
+    <div class="ABButton">
+      <button id="BButton" class="controller">B</button>
+      <button id="AButton" class="controller">A</button>
+    </div>
+    <button id="SButton" class="startbutton">START</button>
+  </div>
+  <br>
+  <br>
+  <p id="title"><a href="http://apps.hidetyo.com">Hidetyo's Apps ホームページ</a></p>
+  <pre id="log"></pre>
+
+  <script src="lib/zip.js"></script>
+  <script src="lib/inflate.js"></script>
+
+  <script src="nes/mappers.js"></script>
+  <script src="mappers/nrom.js"></script>
+  <script src="mappers/mmc1.js"></script>
+  <script src="mappers/uxrom.js"></script>
+  <script src="mappers/cnrom.js"></script>
+  <script src="mappers/mmc3.js"></script>
+  <script src="mappers/axrom.js"></script>
+
+  <script src="nes/cpu.js"></script>
+  <script src="nes/pipu.js"></script>
+  <script src="nes/apu.js"></script>
+  <script src="nes/nes.js"></script>
+
+  <script src="js/audio.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
