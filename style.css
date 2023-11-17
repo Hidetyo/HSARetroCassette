@@ -181,7 +181,9 @@ a {
   }
 }
 
-@media screen and (max-height: 1100px) {
+
+
+@media screen and (max-height: 1100px ) {
   #output {
     width: 320px;
     height: 310px;
@@ -199,11 +201,11 @@ a {
   }
 
   .Dpad {
-    margin-right: 200px;
+    margin-right: 150px;
   }
 
   .ABButton {
-    margin-left: 200px;
+    margin-left: 150px;
     margin-top: -70px;
   }
 
@@ -221,4 +223,94 @@ a {
     width: 4em;
     height: 20px;
   }
+
+  @media screen and (max-width: 350px) {
+
+  
+    .Dpad {
+      margin-right: 105px;
+    }
+  
+    .ABButton {
+      margin-left: 100px;
+      margin-top: -50px;
+    }
+  
+    .controller {
+      width: 25px;
+      height: 25px;
+      margin-top: 1px;
+      margin-bottom: 2px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .startbutton {
+      margin-top: 30px;
+      width: 4em;
+      height: 20px;
+    }
+  
+    .touchController {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
 }
+
+@media screen and (max-height: 800px) {
+  #output {
+    width: 320px;
+    height: 310px;
+    margin-top: -20px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+  }
+  .touchController {
+    margin-top: -60px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+
+  @media screen and (max-width: 350px) {
+    #output {
+      width: 160px;
+      height: 155px;
+      margin-top: -20px;
+      image-rendering: crisp-edges;
+      image-rendering: pixelated;
+    }
+
+    .Dpad {
+      margin-right: 105px;
+    }
+  
+    .ABButton {
+      margin-left: 100px;
+      margin-top: -50px;
+    }
+  
+    .controller {
+      width: 25px;
+      height: 25px;
+      margin-top: 1px;
+      margin-bottom: 2px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .startbutton {
+      margin-top: 20px;
+      width: 4em;
+      height: 20px;
+    }
+  
+    .touchController {
+      margin-top: -60px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}
+
